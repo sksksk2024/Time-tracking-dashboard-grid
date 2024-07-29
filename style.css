@@ -1,0 +1,879 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Rubik, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: hsl(226, 43%, 10%);
+  padding: 30px;
+  font-size: 18px;
+}
+
+.card-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 2rem;
+  margin-bottom: 20px;
+}
+
+.container__name {
+  display: flex;
+  flex-direction: row;
+  padding: 20px 50px;
+  background: hsl(246, 80%, 60%);
+  border-radius: 2rem;
+}
+
+.container__name img {
+  height: 100px;
+  width: 100px;
+  margin-top: 10px;
+  margin-right: 40px;
+  border: 5px solid hsl(0, 0%, 100%);
+  border-radius: 99999px;
+}
+
+.container__name .name {
+  color: hsl(0, 0%, 100%);
+
+  p {
+    font-weight: 400;
+    opacity: 50%;
+    margin-top: 32px;
+    margin-bottom: -20px;
+  }
+
+  h2 {
+    font-size: 30px;
+    font-weight: 300;
+  }
+}
+
+.container__time {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 30px 20px;
+
+  button {
+    font-size: 25px;
+    font-weight: 300;
+    color: hsl(235, 45%, 61%);
+    opacity: 70%;
+    border: none;
+    background: hsl(235, 46%, 20%);
+    cursor: pointer;
+  }
+
+  button:hover, button.enable {
+    color: hsl(0, 0%, 100%);
+    opacity: 100%;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+/*Work*/
+.card-2__work {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  margin-bottom: 20px;
+
+  .behind {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    z-index: 1;
+    background: hsl(15, 100%, 70%);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+
+    img {
+      position: relative;
+      left: calc(100% - 139px);
+      height: 300px;
+      top: -14px;
+    }
+  }
+
+  .front {
+    position: absolute;
+    top: 60px; /* Position 10px over the .behind element */
+    left: 0;
+    right: 0;
+    height: 140px;
+    z-index: 2; /* Ensure it's above .behind */
+    padding: 20px 40px;
+    border-radius: 1rem; /* Match the card's radius */
+    background: hsl(235, 46%, 20%); /* Background color for the front part */
+
+    img {
+      cursor: pointer;
+      transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for opacity and transform */
+      opacity: 0.5;
+    }
+    
+    img:hover {
+      opacity: 1;
+      transform: scale(1.3); /* Slightly enlarges the image on hover */
+    }
+  }
+
+  .container__activity, .container__improve {
+    color: white; /* Adjust text color as needed */
+  }
+
+  .container__activity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: -20px;
+
+    p {
+      font-weight: 500;
+    }
+  }
+
+  .container__improve {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 20px;
+  }
+
+  .container__improve h1 {
+    position: relative;
+    top: -22px;
+    font-size: 40px;
+    font-weight: 300;
+  }
+
+  .container__improve p {
+    position: relative;
+    bottom: calc(100% - 100px);
+  }
+}
+/*Play*/
+.card-2__play {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  margin-bottom: 20px;
+
+
+  .behind {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    z-index: 1;
+    background: hsl(195, 74%, 62%);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+
+    img {
+      position: relative;
+      left: calc(100% - 144px);
+      height: 122px;
+      top: -14px;
+    }
+  }
+
+  .front {
+    position: absolute;
+    top: 60px; /* Position 10px over the .behind element */
+    left: 0;
+    right: 0;
+    height: 140px;
+    z-index: 2; /* Ensure it's above .behind */
+    padding: 20px 40px;
+    border-radius: 1rem; /* Match the card's radius */
+    background: hsl(235, 46%, 20%); /* Background color for the front part */
+
+    img {
+      cursor: pointer;
+      transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for opacity and transform */
+      opacity: 0.5;
+    }
+    
+    img:hover {
+      opacity: 1;
+      transform: scale(1.3); /* Slightly enlarges the image on hover */
+    }
+  }
+
+  .container__activity, .container__improve {
+    color: white; /* Adjust text color as needed */
+  }
+
+  .container__activity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: -20px;
+
+    p {
+      font-weight: 500;
+    }
+  }
+
+  .container__improve {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 20px;
+  }
+
+  .container__improve h1 {
+    position: relative;
+    top: -22px;
+    font-size: 40px;
+    font-weight: 300;
+  }
+
+  .container__improve p {
+    position: relative;
+    bottom: calc(100% - 100px);
+  }
+}
+
+/*Study*/
+.card-2__study {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  margin-bottom: 20px;
+
+  .behind {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    z-index: 1;
+    background: hsl(348, 100%, 68%);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+
+    img {
+      position: relative;
+      left: calc(100% - 143px);
+      height: 124px;
+      top: -14px;
+    }
+  }
+
+  .front {
+    position: absolute;
+    top: 60px; /* Position 10px over the .behind element */
+    left: 0;
+    right: 0;
+    height: 140px;
+    z-index: 2; /* Ensure it's above .behind */
+    padding: 20px 40px;
+    border-radius: 1rem; /* Match the card's radius */
+    background: hsl(235, 46%, 20%); /* Background color for the front part */
+
+    img {
+      cursor: pointer;
+      transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for opacity and transform */
+      opacity: 0.5;
+    }
+    
+    img:hover {
+      opacity: 1;
+      transform: scale(1.3); /* Slightly enlarges the image on hover */
+    }
+  }
+
+  .container__activity, .container__improve {
+    color: white; /* Adjust text color as needed */
+  }
+
+  .container__activity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: -20px;
+
+    p {
+      font-weight: 500;
+    }
+  }
+
+  .container__improve {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 20px;
+  }
+
+  .container__improve h1 {
+    position: relative;
+    top: -22px;
+    font-size: 40px;
+    font-weight: 300;
+  }
+
+  .container__improve p {
+    position: relative;
+    bottom: calc(100% - 100px);
+  }
+}
+
+/*Exercise*/
+.card-2__exercise {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  margin-bottom: 20px;
+
+  .behind {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    z-index: 1;
+    background: hsl(145, 58%, 55%);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+
+    img {
+      position: relative;
+      left: calc(100% - 150px);
+      height: 86px;
+      top: -1px;
+    }
+  }
+
+  .front {
+    position: absolute;
+    top: 60px; /* Position 10px over the .behind element */
+    left: 0;
+    right: 0;
+    height: 140px;
+    z-index: 2; /* Ensure it's above .behind */
+    padding: 20px 40px;
+    border-radius: 1rem; /* Match the card's radius */
+    background: hsl(235, 46%, 20%); /* Background color for the front part */
+
+    img {
+      cursor: pointer;
+      transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for opacity and transform */
+      opacity: 0.5;
+    }
+    
+    img:hover {
+      opacity: 1;
+      transform: scale(1.3); /* Slightly enlarges the image on hover */
+    }
+  }
+
+  .container__activity, .container__improve {
+    color: white; /* Adjust text color as needed */
+  }
+
+  .container__activity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: -20px;
+
+    p {
+      font-weight: 500;
+    }
+  }
+
+  .container__improve {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 20px;
+  }
+
+  .container__improve h1 {
+    position: relative;
+    top: -22px;
+    font-size: 40px;
+    font-weight: 300;
+  }
+
+  .container__improve p {
+    position: relative;
+    bottom: calc(100% - 100px);
+  }
+}
+
+/*Social*/
+.card-2__social {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  margin-bottom: 20px;
+
+  .behind {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    z-index: 1;
+    background: hsl(264, 64%, 52%);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+
+    img {
+      position: relative;
+      left: calc(100% - 121px);
+      height: 140px;
+      top: -14px;
+    }
+  }
+
+  .front {
+    position: absolute;
+    top: 60px; /* Position 10px over the .behind element */
+    left: 0;
+    right: 0;
+    height: 140px;
+    z-index: 2; /* Ensure it's above .behind */
+    padding: 20px 40px;
+    border-radius: 1rem; /* Match the card's radius */
+    background: hsl(235, 46%, 20%); /* Background color for the front part */
+
+    img {
+      cursor: pointer;
+      transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for opacity and transform */
+      opacity: 0.5;
+    }
+    
+    img:hover {
+      opacity: 1;
+      transform: scale(1.3); /* Slightly enlarges the image on hover */
+    }
+  }
+
+  .container__activity, .container__improve {
+    color: white; /* Adjust text color as needed */
+  }
+
+  .container__activity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: -20px;
+
+    p {
+      font-weight: 500;
+    }
+  }
+
+  .container__improve {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 20px;
+  }
+
+  .container__improve h1 {
+    position: relative;
+    top: -22px;
+    font-size: 40px;
+    font-weight: 300;
+  }
+
+  .container__improve p {
+    position: relative;
+    bottom: calc(100% - 100px);
+  }
+}
+
+/*Self Care*/
+.card-2__care {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  margin-bottom: 20px;
+
+  .behind {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    z-index: 1;
+    background: hsl(43, 84%, 65%);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+
+    img {
+      position: relative;
+      left: calc(100% - 114px);
+      height: 94px;
+      top: -14px;
+    }
+  }
+
+  .front {
+    position: absolute;
+    top: 60px; /* Position 10px over the .behind element */
+    left: 0;
+    right: 0;
+    height: 140px;
+    z-index: 2; /* Ensure it's above .behind */
+    padding: 20px 40px;
+    border-radius: 1rem; /* Match the card's radius */
+    background: hsl(235, 46%, 20%); /* Background color for the front part */
+
+    img {
+      cursor: pointer;
+      transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for opacity and transform */
+      opacity: 0.5;
+    }
+    
+    img:hover {
+      opacity: 1;
+      transform: scale(1.3); /* Slightly enlarges the image on hover */
+    }
+  }
+
+  .container__activity, .container__improve {
+    color: white; /* Adjust text color as needed */
+  }
+
+  .container__activity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: -20px;
+
+    p {
+      font-weight: 500;
+    }
+  }
+
+  .container__improve {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 20px;
+  }
+
+  .container__improve h1 {
+    position: relative;
+    top: -22px;
+    font-size: 40px;
+    font-weight: 300;
+  }
+  
+  .container__improve p {
+    position: relative;
+    bottom: calc(100% - 100px);
+  }
+}
+
+
+@media (min-width: 1000px) {
+  .card {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+  }
+
+  .card-1 {
+    display: flex;
+    border-radius: 1rem;
+    height: 884px;
+    
+    .container__name,
+    .container__time {
+      flex-direction: column;
+    }
+    
+    .container__name {
+      padding-bottom: calc(1vw + 400px);
+      border-radius: 1rem;
+      height: 700px;
+
+      h2 {
+        font-size: 40px;
+      }
+    }
+    
+    .container__name h2 {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .container__time {
+      align-self: start;
+      
+      .d {
+        left: 0px;
+        position: relative;
+        margin-bottom: 15px;
+      }
+
+      .w {
+        left: 10px;
+        position: relative;
+        margin-bottom: 15px;
+      }
+      
+      .m {
+        left: 14px;
+        position: relative;
+      }
+    }
+  }
+  
+  
+  .card-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .card21 .card22 {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    width: 930px;
+  }
+  
+  .card-2__work {
+    height: 280px;
+  }
+  
+  .card-2__work .front {
+    height: 220px;
+  }
+  
+  .card-2__work .front .container__improve {
+    display: flex;
+    flex-direction: column;
+    
+    h1 {
+      font-size: 70px;
+      margin-top: 40px;
+    }
+    
+    p {
+      bottom: 87px;
+      margin-bottom: 20px;
+    }
+  }
+  
+  
+  .card-2__play {
+    height: 280px;
+  }
+  
+  .card-2__play .front {
+    height: 220px;
+  }
+  
+  .card-2__play .front .container__improve {
+    display: flex;
+    flex-direction: column;
+    
+    h1 {
+      font-size: 70px;
+      margin-top: 40px;
+    }
+    
+    p {
+      bottom: 87px;
+      margin-bottom: 20px;
+    }
+  }
+  
+  
+  .card-2__study {
+    height: 280px;
+  }
+  
+  .card-2__study .front {
+    height: 220px;
+  }
+  
+  .card-2__study .front .container__improve {
+    display: flex;
+    flex-direction: column;
+    
+    h1 {
+      font-size: 70px;
+      margin-top: 40px;
+    }
+    
+    p {
+      bottom: 87px;
+      margin-bottom: 20px;
+    }
+  }
+  
+  
+  .card-2__exercise {
+    height: 280px;
+  }
+  
+  .card-2__exercise .front {
+    height: 220px;
+  }
+  
+  .card-2__exercise .front .container__improve {
+    display: flex;
+    flex-direction: column;
+    
+    h1 {
+      font-size: 70px;
+      margin-top: 40px;
+    }
+    
+    p {
+      bottom: 87px;
+      margin-bottom: 20px;
+    }
+  }
+  
+  
+  .card-2__social {
+    height: 280px;
+  }
+  
+  .card-2__social .front {
+    height: 220px;
+  }
+  
+  .card-2__social .front .container__improve {
+    display: flex;
+    flex-direction: column;
+    
+    h1 {
+      font-size: 70px;
+      margin-top: 40px;
+    }
+    
+    p {
+      bottom: 87px;
+      margin-bottom: 20px;
+    }
+  }
+  
+  
+  .card-2__care {
+    height: 280px;
+  }
+  
+  .card-2__care .front {
+    height: 220px;
+  }
+  
+  .card-2__care .front .container__improve {
+    display: flex;
+    flex-direction: column;
+    
+    h1 {
+      font-size: 70px;
+      margin-top: 40px;
+    }
+    
+    p {
+      bottom: 87px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media (min-width: 1340px) {
+  .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .card-1 {
+    grid-column: 1; /* Occupy the first column */
+    grid-row: 1 / span 2; /* Span two rows if necessary */
+    align-self: start;
+    width: 300px;
+    height: 600px;
+    
+    .container__name {
+      padding-bottom: 50px;
+
+      h2 {
+        font-size: 50px;
+      }
+    }
+  }
+  
+  .card-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    grid-column: 2 / span 4; /* Spans across all 4 columns */
+  }
+  
+  .card21 {
+    display: grid;
+    grid-column: 1 / 4; /* Spans across 3 columns if intended */
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .card22 {
+    display: grid;
+    grid-column: 1 / 4; /* Spans across 3 columns if intended */
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .card-2__work {
+    grid-column: 1;
+  }
+  
+  .card-2__play {
+    grid-column: 2;
+  }
+  
+  .card-2__study {
+    grid-column: 3;
+  }
+  
+  .card-2__exercise {
+    grid-column: 1;
+  }
+
+  .card-2__social {
+    grid-column: 2;
+  }
+  
+  .card-2__care {
+    grid-column: 3;
+  }
+}
+
+.attribution {
+  position: relative;
+  bottom: 0;
+  text-align: center;
+  font-size: 20px;
+  color: hsl(180, 100%, 50%);
+
+  a {
+    color: hsl(33, 100%, 88%);
+  }
+}

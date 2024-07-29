@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./app/images/favicon-32x32.png">
+  
+  <!--Google Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Manrope:wght@700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app/js/script.js" defer></script>
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+</head>
+<body>
+  <header>
+    <h1 hidden>Time tracking dashboard</h1>
+  </header>
+
+  <main>
+
+    <div class="card">
+
+      <div class="card-1">
+        <div class="container__name">
+          <img src="./app/images/image-jeremy.png" alt="">
+          <div class="name">
+            <p>Report for</p>
+            <h2>Jeremy Robson</h2>
+          </div>
+        </div>
+        <div class="container__time">
+          <button class="d enable" type="daily">
+            Daily
+          </button>
+          <button class="w enable" type="weekly">
+            Weekly
+          </button>
+          <button class="m enable" type="monthly">
+            Monthly
+          </button>
+        </div>
+      </div>
+  
+      <div class="card-2">
+  
+        <div class="card21">
+          <!--Work-->
+      
+          <div class="card-2__work daily">
+            <div class="behind">
+              <img src="./app/images/icon-work.svg" alt="">
+            </div>
+            <div class="front">
+              <div class="container__activity">
+                <p>Work</p>
+                <img class="card-2__eclipse" src="./app/images/icon-ellipsis.svg" alt="">
+              </div>
+        
+              <div class="container__improve">
+                <h1>5hrs</h1>
+                <p>Previous - 7hrs</p>
+              </div>
+            </div>
+          </div>
+      
+      
+          <div class="card-2__work weekly hide">
+            <div class="behind">
+              <img src="./app/images/icon-work.svg" alt="">
+            </div>
+            <div class="front">
+              <div class="container__activity">
+                <p>Work</p>
+                <img class="card-2__eclipse" src="./app/images/icon-ellipsis.svg" alt="">
+              </div>
+        
+              <div class="container__improve">
+                <h1>32hrs</h1>
+                <p>Previous - 36hrs</p>
+              </div>
+            </div>
+          </div>
+      
+      
+          <div class="card-2__work monthly hide">
+            <div class="behind">
+              <img src="./app/images/icon-work.svg" alt="">
+            </div>
+            <div class="front">
+              <div class="container__activity">
+                <p>Work</p>
+                <img class="card-2__eclipse" src="./app/images/icon-ellipsis.svg" alt="">
+              </div>
+        
+              <div class="container__improve">
+                <h1>103hrs</h1>
+                <p>Previous - 128hrs</p>
+              </div>
+            </div>
+          </div>
+      
+          <!--Play-->
+          <div class="card-2__play daily">
+            <div class="behind">
+              <img src="./app/images/icon-play.svg" alt="">
+            </div>
+            <div class="front">
+              <div class="container__activity">
+                <p>Play</p>
+                <img class="card-2__eclipse" src="./app/images/icon-ellipsis.svg" alt="">
+              </div>
+        
+              <div class="container__improve">
+                <h1>1hrs</h1>
+                <p>Previous - 2hrs</p>
+              </div>
+            </div>
+          </div>
+      
+      
+          <div class="card-2__play weekly hide">
+            <div class="behind">
+              <img src="./app/images/icon-play.svg" alt="">
+            </div>
+            <div class="front">
+              <div class="container__activity">
+                <p>Play</p>
+                <img class="card-2__eclipse" src="./app/images/icon-ellipsis.svg" alt="">
+              </div>
+        
+              <div class="container__improve">
+                <h1>10hrs</h1>
+                <p>Previous - 8hrs</p>
+              </div>
+            </div>
+          </div>
+      
+      
+          <div class="card-2__play monthly hide">
+            <div class="behind">
+              <img src="./app/images/icon-play.svg" alt="">
+            </div>
+            <div class="front">
+              <div class="container__activity">
+                <p>Play</p>
+                <img class="card-2__eclipse" src="./app/images/icon-ellipsis.svg" alt="">
+              </div>
+        
+              <div class="container__improve">
+                <h1>23hrs</h1>
+                <p>Previous - 29hrs</p>
+              </div>
+            </div>
+          </div>
+          
+      
+      
+          <!--Study-->
+          <div class="card-2__study daily">
+            <div class="behind">
+              <img src="./app/images/icon-study.svg" alt="">
+            </div>
+            <div class="front">
+              <div class="container__activity">
+                <p>Study</p>
+                <img class="card-2__eclipse" src="./app/images/icon-ellipsis.svg" alt="">
+              </div>
+        
+              <div class="container__improve">
+                <h1>0hrs</h1>
+                <p>Previous - 1hrs</p>
+              </div>
+            </div>
+          </div>
+      
+      
+          <div class="card-2__study weekly hide">
+            <div class="behind">
+              <img src="./app/images/icon-study.svg" alt="">
+            </div>
+            <div class="front">
+              <div class="container__activity">
+                <p>Study</p>
+                <img class="card-2__eclipse" src="./app/images/icon-ellipsis.svg" alt="">
+              </div>
+        
+              <div class="container__improve">
+                <h1>4hrs</h1>
+                <p>Previous - 7hrs</p>
+              </div>
+            </div>
+          </div>
+      
+      
+          <div class="card-2__study monthly hide">
+            <div class="behind">
+              <img src="./app/images/icon-study.svg" alt="">
+            </div>
+            <div class="front">
+              <div class="container__activity">
+                <p>Study</p>
+                <img class="card-2__eclipse" src="./app/images/icon-ellipsis.svg" alt="">
+              </div>
+        
+              <div class="container__improve">
+                <h1>13hrs</h1>
+                <p>Previous - 19hrs</p>
+              </div>
+            </div>
+        </div>
+      </div>
+        
+        <div class="card22">
+          <!--Exercise-->
+          <div class="card-2__exercise daily">
+            <div class="behind">
+              <img src="./app/images/icon-exercise.svg" alt="">
+            </div>
+            <div class="front">
+              <div class="container__activity">
+                <p>Exercise</p>
+                <img class="card-2__eclipse" src="./app/images/icon-ellipsis.svg" alt="">
+              </div>
+        
+              <div class="container__improve">
+                <h1>1hrs</h1>
+                <p>Previous - 1hrs</p>
+              </div>
+            </div>
+          </div>
+      
+      
+          <div class="card-2__exercise weekly hide">
+            <div class="behind">
+              <img src="./app/images/icon-exercise.svg" alt="">
+            </div>
+            <div class="front">
+              <div class="container__activity">
+                <p>Exercise</p>
+                <img class="card-2__eclipse" src="./app/images/icon-ellipsis.svg" alt="">
+              </div>
+        
+              <div class="container__improve">
+                <h1>4hrs</h1>
+                <p>Previous - 5hrs</p>
+              </div>
+            </div>
+          </div>
+      
+      
+          <div class="card-2__exercise monthly hide">
+            <div class="behind">
+              <img src="./app/images/icon-exercise.svg" alt="">
+            </div>
+            <div class="front">
+              <div class="container__activity">
+                <p>Exercise</p>
+                <img class="card-2__eclipse" src="./app/images/icon-ellipsis.svg" alt="">
+              </div>
+        
+              <div class="container__improve">
+                <h1>11hrs</h1>
+                <p>Previous - 18hrs</p>
+              </div>
+            </div>
+          </div>
+      
+        
+      
+          <!--Social-->
+          <div class="card-2__social daily">
+            <div class="behind">
+              <img src="./app/images/icon-social.svg" alt="">
+            </div>
+            <div class="front">
+              <div class="container__activity">
+                <p>Social</p>
+                <img class="card-2__eclipse" src="./app/images/icon-ellipsis.svg" alt="">
+              </div>
+        
+              <div class="container__improve">
+                <h1>1hrs</h1>
+                <p>Previous - 3hrs</p>
+              </div>
+            </div>
+          </div>
+      
+      
+          <div class="card-2__social weekly hide">
+            <div class="behind">
+              <img src="./app/images/icon-social.svg" alt="">
+            </div>
+            <div class="front">
+              <div class="container__activity">
+                <p>Social</p>
+                <img class="card-2__eclipse" src="./app/images/icon-ellipsis.svg" alt="">
+              </div>
+        
+              <div class="container__improve">
+                <h1>5hrs</h1>
+                <p>Previous - 10hrs</p>
+              </div>
+            </div>
+          </div>
+      
+      
+          <div class="card-2__social monthly hide">
+            <div class="behind">
+              <img src="./app/images/icon-social.svg" alt="">
+            </div>
+            <div class="front">
+              <div class="container__activity">
+                <p>Social</p>
+                <img class="card-2__eclipse" src="./app/images/icon-ellipsis.svg" alt="">
+              </div>
+        
+              <div class="container__improve">
+                <h1>21hrs</h1>
+                <p>Previous - 23hrs</p>
+              </div>
+            </div>
+          </div>
+      
+        
+        
+          
+          <!--Self Care-->
+          <div class="card-2__care daily">
+            <div class="behind">
+              <img src="./app/images/icon-self-care.svg" alt="">
+            </div>
+            <div class="front">
+              <div class="container__activity">
+                <p>Self Care</p>
+                <img class="card-2__eclipse" src="./app/images/icon-ellipsis.svg" alt="">
+              </div>
+        
+              <div class="container__improve">
+                <h1>0hrs</h1>
+                <p>Previous - 1hrs</p>
+              </div>
+            </div>
+          </div>
+      
+      
+          <div class="card-2__care weekly hide">
+            <div class="behind">
+              <img src="./app/images/icon-self-care.svg" alt="">
+            </div>
+            <div class="front">
+              <div class="container__activity">
+                <p>Self Care</p>
+                <img class="card-2__eclipse" src="./app/images/icon-ellipsis.svg" alt="">
+              </div>
+        
+              <div class="container__improve">
+                <h1>0hrs</h1>
+                <p>Previous - 1hrs</p>
+              </div>
+            </div>
+          </div>
+      
+      
+          <div class="card-2__care monthly hide">
+            <div class="behind">
+              <img src="./app/images/icon-self-care.svg" alt="">
+            </div>
+            <div class="front">
+              <div class="container__activity">
+                <p>Self Care</p>
+                <img class="card-2__eclipse" src="./app/images/icon-ellipsis.svg" alt="">
+              </div>
+        
+              <div class="container__improve">
+                <h1>7hrs</h1>
+                <p>Previous - 11hrs</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+  </main>
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">sksksk</a>.
+    </div>
+  </footer>
+</body>
+</html>
